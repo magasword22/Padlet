@@ -6,6 +6,7 @@ Texte extrait du document « Padlet CEJM » (PDF de 505 pages, composé uniqueme
 |---|---|
 | `padlet_cejm_propre.txt` | Texte nettoyé, avec un repère `===== Page N =====` au début de chaque page. **C'est la version à utiliser.** |
 | `padlet_cejm_ocr.txt` | Sortie brute de l'OCR, sans correction (pages séparées par un saut de page). |
+| `padlet_cejm_ocr.pdf` | Le PDF d'origine avec une couche de texte invisible : texte sélectionnable et recherche possible (stocké avec Git LFS). |
 | `scripts/nettoyage_ocr.py` | Script qui produit la version nettoyée à partir de la sortie brute. |
 
 ## Méthode
@@ -28,4 +29,4 @@ python3 scripts/nettoyage_ocr.py padlet_cejm_ocr.txt padlet_cejm_propre.txt lign
 
 - Quand le texte d'une image se trouve sur la même ligne qu'une phrase du cours, le fragment parasite est conservé.
 - Quelques erreurs isolées subsistent (ex. « a » au lieu de « à »).
-- Le PDF avec texte sélectionnable (171 Mo) n'est pas dans ce dépôt : il dépasse la limite de 100 Mo par fichier de GitHub.
+- Le PDF (171 Mo) est stocké avec Git LFS : pour le récupérer en clonant le dépôt, installer `git-lfs`. Le texte caché dans le PDF n'a pas reçu les corrections de la version nettoyée.
